@@ -45,6 +45,15 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: rgb(151, 205, 169);
+}
+
+button:active {
+    background-color: rgb(255, 241, 173);
+    border-color: rgb(151, 205, 169);
+}
+
 footer {
     margin-top: 5vw;
 }
