@@ -1,0 +1,54 @@
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(255, 186, 145);
+}
+
+/* BODY */
+body {
+    opacity: 1; /*Page loading effect*/
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+}
+
+p {
+    font-family: 'Satisfy';
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+h1 {
+    font-family: 'Pacifico';
+    text-align: center;
+    color: rgb(255, 241, 173);
+    text-shadow: 2px 2px 10px black;
+    background-color: rgb(151, 205, 169);
+    border-color: rgb(255, 241, 173);
+    border-width: 3px;
+    border-radius: 20px;
+}
+
+img {
+    border-radius: 250px;
+    box-shadow: 0 0 50px rgb(151, 205, 169);
+}
+
+button {
+    background-color: rgb(172, 232, 192);
+    border-color: rgb(255, 241, 173);
+    border-width: 0.5vw;
+    border-radius: 20px;
+    font-family: 'Satisfy';
+    font-size: 2vw;
+    text-align: center;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 5vw;
+}
+
+pf {
+    font-family: 'Courier New', Courier, monospace;
+}
