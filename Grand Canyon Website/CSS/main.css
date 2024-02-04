@@ -1,0 +1,245 @@
+html {
+    background-color: #D9AC74;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Cooper';
+    font-size: 60px;
+    text-decoration: underline overline;
+    text-decoration-color:#446E81;
+    top: -38px;
+    left: 30vw;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #446E81;
+    color: white;
+    position: relative;
+}
+
+h2 {
+    font-family: 'Cooper';
+    font-size: 12vmin;
+    color: white;
+    -webkit-text-stroke-width: .5vmin;
+    -webkit-text-stroke-color: #446E81;
+}
+
+#logoicon {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #73B8D9;
+    z-index: 1;
+}
+
+#topbanner1 {
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #9E7D54;
+}
+
+#topbanner2 {
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    background-color: #73B8D9;
+    border: 5px solid #456D81;
+}
+
+
+#navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: #73B8D9; /* This colors the navbar black */
+    border: 5px solid #456D81;
+    position: absolute; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 59px; /* This ensures no space is displayed above the navbar */
+    left: 110px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    /*z-index: 1; /* This ensures other elements don't display over the navbar */
+    -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
+    animation: moveNav 5s; /* This makes the moveNav animation last 5 seconds */
+    list-style-type: none;
+}
+
+/* The animation effect for moving the nav bar in from above the left of the screen on page load */
+@keyframes moveNav {
+    from {left: -100vw;} /* The navbar is starting off screen to the left */
+    to { left: 110px;} /* This moves the navbar into place on the screen */
+}
+
+#navbar a {
+    float: left; /* This specifies that the text floats on the left on the navbar */
+    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+    color: #A0DA73; /* This is the font color for text on our navbar */
+    margin: -5px;
+    left: -40px;
+    top: -5px;
+    padding-left:60px; /* This adds padding around our text */
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 11px;
+    border-bottom-right-radius: 50px;
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+    font-family: 'Ink Free'; /* This specifies the font family for text on our navbar */
+    font-size: 25px; /* This specifies the font size for text on our navbar */
+    text-align: center; /* This centers the text within its container */
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+    background-color: #73B8D9;
+    border: 5px solid #456D81;
+}
+
+#navbar a:hover {
+    background-color: #456D81;
+    transition:0.5s;
+}
+
+.backgroundp {
+    background-image: url("../Images/SkywalkGC.jpg");
+    border-bottom-left-radius:80px;
+    border-bottom-right-radius: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 530px;
+    position: relative;
+}
+
+#overlayp {
+    position:absolute;
+    bottom: 100px;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    color: #456D81;
+}
+
+p {
+    font-family: 'Cooper';
+}
+
+#returnb {
+    font-family: 'Ink Free';
+    color: #456D81;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    bottom: 50px;
+    left: 20px;
+    position: fixed;
+    padding: 10px;
+    font-weight: bolder;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '⇈';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.title2 {
+    padding: 20px;
+    text-align: center;
+    background-color: #73B8D9;
+    border: 5px solid #456D81;
+}
+
+#aboutp {
+    color: white;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#cbox {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    text-align: center;
+}

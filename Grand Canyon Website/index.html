@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head id="heada">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./CSS/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Canyon Hikers</title>
+        <div id="fulltop">
+            <div id="topbanner1"></div>
+            <div id="topbanner2"></div>
+
+            <h1>CANYON&nbsp;HIKERS</h1>
+            <img src="./Images/GCLogoB.png" alt="Grand Canyon Logo"  id="logoicon">
+        </div>
+        <nav>
+            <ul id="navbar">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </head>
+    <body>
+        <!--<img src="./Images/SkywalkGC.jpg" alt="Background GC Image" id="backgroundp">-->
+        <div class="backgroundp">
+            <button class="button" onclick="topFunction()" id="returnb"><span>RETURN TO TOP</span></button>
+            <p id="overlayp">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+
+
+        <h2 class="title2" id="about">ABOUT</h2>
+            <p id="aboutp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+
+        <h2 class="title2" id="gallery">GALLERY</h2>
+            <div class="row">
+                <div class="column">
+                    <img src="Images/GalleryImage.jpg" alt="Grand Canyon 1/4" style="width:100%" onclick="myFunction(this); playopen()">
+                </div>
+                <div class="column" onclick="playopen()">
+                    <img src="Images/Gallery2.jpeg" alt="Grand Canyon 2/4" style="width:100%" onclick="myFunction(this); playopen()">
+                </div>
+                <div class="column" onclick="playopen()">
+                    <img src="Images/Gallery3.jpg" alt="Grand Canyon 3/4" style="width:100%" onclick="myFunction(this); playopen()">
+                </div>
+                <div class="column" onclick="playopen()">
+                    <img src="Images/Gallery4.jpg" alt="Grand Canyon 4/4" style="width:100%" onclick="myFunction(this); playopen()">
+                </div>
+            </div>
+            
+            <!-- The expanding image container -->
+            <div class="container">
+                <!-- Close the image -->
+                <span onclick="this.parentElement.style.display='none'; playclose()" class="closebtn">&times;</span>
+            
+                <!-- Expanded image -->
+                <img id="expandedImg" style="width:100%">
+            
+                <!-- Image text -->
+                <div id="imgtext"></div>
+            </div>
+
+    </body>
+    <footer>
+        <h2 class="title2" id="contact">CONTACT</h2>
+        <form id="cbox" action="">
+            <label for="Name">Full Name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="Email">Email Address:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script src="./JS/main.js"></script>
+        <audio id="open" src="Sounds/Gone with the Wind.wav"></audio>
+        <audio id="close" src="Sounds/Wisp.wav"></audio>
+    </footer>
+</html>
